@@ -1,7 +1,8 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[codz]
-*$py.class
+.venv/
+venv/
+.ipynb_checkpoints/
 
 # C extensions
 *.so
