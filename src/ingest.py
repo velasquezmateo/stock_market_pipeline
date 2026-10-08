@@ -8,7 +8,6 @@ supabase_key = os.getenv("SUPABASE_KEY")
 
 supabase = create_client(supabase_url, supabase_key)
 
-
 headers = {
     "Authorization": f"Token {api_key}"
 }
@@ -26,9 +25,11 @@ tickers=["AAPL",
     "KO",
     "CAT"]
 
+start_date=(datetime.now()-timedelta(days=2)).strftime(%Y-%m-%d)
+
 for ticker in tickers:
 
-    url=f'https://api.tiingo.com/tiingo/daily/{ticker}/prices?startDate=2000-1-1'
+    url=f'https://api.tiingo.com/tiingo/daily/{ticker}/prices?startDate={start_date}'
 
     response=requests.get(url, headers=headers)
     data=response.json()
