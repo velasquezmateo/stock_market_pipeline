@@ -28,7 +28,7 @@ tickers=["AAPL",
 
 for ticker in tickers:
 
-    url=f'https://api.tiingo.com/tiingo/daily/{ticker}/prices?startDate=2026-1-1'
+    url=f'https://api.tiingo.com/tiingo/daily/{ticker}/prices?startDate=2000-1-1'
 
     response=requests.get(url, headers=headers)
     data=response.json()
