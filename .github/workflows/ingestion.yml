@@ -3,6 +3,8 @@ name: ingestion_pipeline
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 23 * * 1-5"
 
 jobs:
   test:
