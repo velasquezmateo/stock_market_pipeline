@@ -22,4 +22,9 @@ jobs:
       - name: Run Python
         env:
           TIINGO_API_KEY: ${{ secrets.TIINGO_API_KEY }}
-        run: python src/ingest.py
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+  run: python src/ingest.py
+
+
+        
