@@ -1,10 +1,15 @@
 import requests
 import os
 
+api_key = os.getenv("TIINGO_API_KEY")
 supabase_url = os.getenv("SUPABASE_URL")
 supabase_key = os.getenv("SUPABASE_KEY")
 
-print("SUPABASE_URL recibida:", bool(supabase_url))
-print("SUPABASE_KEY recibida:", bool(supabase_key))
+
+supabase = create_client(supabase_url, supabase_key)
+
+response = supabase.table("stock_prices").select("id").limit(1).execute()
+
+print("Conexión con Supabase correcta")
 
 
