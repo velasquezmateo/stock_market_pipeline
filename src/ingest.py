@@ -1,5 +1,6 @@
 import requests
 import os
+from supabase import create_client
 
 api_key = os.getenv("TIINGO_API_KEY")
 supabase_url = os.getenv("SUPABASE_URL")
