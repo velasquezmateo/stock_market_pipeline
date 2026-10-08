@@ -12,6 +12,17 @@ headers = {
 
 all_data=[]
 
+tickers=["AAPL",
+    "MSFT",
+    "NVDA",
+    "AMZN",
+    "GOOGL",
+    "JPM",
+    "XOM",
+    "JNJ",
+    "KO",
+    "CAT"]
+
 for ticker in tickers:
 
     url=f'https://api.tiingo.com/tiingo/daily/{ticker}/prices?startDate=2000-1-1'
