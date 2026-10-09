@@ -25,7 +25,7 @@ tickers=["AAPL",
     "KO",
     "CAT"]
 
-start_date=(datetime.now()-timedelta(days=2)).strftime(%Y-%m-%d)
+start_date=(datetime.now()-timedelta(days=2)).strftime("%Y-%m-%d")
 
 for ticker in tickers:
 
